@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_21_010937) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_23_220829) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_010937) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
+    t.string "icon_url"
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
