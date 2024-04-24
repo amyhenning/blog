@@ -1,24 +1,30 @@
-# README
+# Demo Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+1. Clone the repo.
 
-* Ruby version
+2. Install gems:
+    ```
+    bundle
+    ```
 
-* System dependencies
+3. Set up empty development database.
+    ```
+    RAILS_ENV=development rails db:create db:environment:set
+    ```
 
-* Configuration
+4. Run migrations for existing schema:
+    ```
+    RAILS_ENV=development rails db:migrate
+    ```
 
-* Database creation
+5. Seed the database with a very small amount of test data:
+    ```
+    RAILS_ENV=development rails db:seed
+    ```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+6. Start the rails console:
+    ```
+    rails c
+    ```
